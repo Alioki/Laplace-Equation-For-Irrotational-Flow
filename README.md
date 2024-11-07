@@ -1,6 +1,6 @@
 # Project Title
 
-Laplace equation for irrotational flow
+Solve Laplace equation for irrotational flow with Finite Element Method
 
 ## Description
 
