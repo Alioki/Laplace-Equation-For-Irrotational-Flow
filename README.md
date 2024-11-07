@@ -98,6 +98,11 @@ By applying FEM to solve the Laplace equation, petroleum and chemical engineers 
 
 
 
+The solutions obtained using Python and FreeFEM++ both demonstrate the behavior of irrotational flow around a solid object by solving the Laplace equation under the specified boundary conditions. The top image, generated in Python, shows the triangular mesh with a gradient indicating the flow potential, effectively capturing the effect of the solid boundary on the flow. In contrast, the lower image from FreeFEM++ provides a smooth, continuous potential field surrounding the object, with color contours representing the potential gradient from inlet to outlet.
+
+Both methods produce consistent results, validating the boundary conditions and the effectiveness of the Laplace equation for modeling irrotational flow. The smooth transitions in the potential field around the object illustrate how the presence of the solid boundary influences the flow, with gradients that are consistent between the two platforms.
+
+
 ## Refrences
 
 * Simpson, Guy. Practical finite element modeling in earth science using matlab. John Wiley & Sons
