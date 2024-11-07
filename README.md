@@ -107,7 +107,11 @@ Both methods produce consistent results, validating the boundary conditions and 
 ![ponetial](https://github.com/user-attachments/assets/50994b1c-f026-49b6-8bb3-63db3654a4e4)
 
 * FreeFem++
-![Potential](https://github.com/user-attachments/assets/80342956-aa28-4445-ac10-10ca3a8a1c65)
+
+ <p align="center">
+ ![Potential](https://github.com/user-attachments/assets/80342956-aa28-4445-ac10-10ca3a8a1c65)
+</p>
+
 
 
 
