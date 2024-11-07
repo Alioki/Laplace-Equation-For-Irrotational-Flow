@@ -113,8 +113,9 @@ Both methods produce consistent results, validating the boundary conditions and 
 * FreeFem++
 
  <p align="center">
- ![Potential](https://github.com/user-attachments/assets/80342956-aa28-4445-ac10-10ca3a8a1c65)
+  <img src="https://github.com/user-attachments/assets/80342956-aa28-4445-ac10-10ca3a8a1c65" alt="Potential">
 </p>
+
 
 
 
