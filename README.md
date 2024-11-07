@@ -55,11 +55,11 @@ The boundary conditions applied to this domain are:
 
 3. **Assembly of the Global System of Equations**: Each finite element contributes to the global system of equations based on its local properties and the boundary conditions. The assembled system reflects the entire domain, including the boundaries with specified flow conditions and the no-flow boundary around the solid object.
 
-4. **Application of Boundary Conditions**: The specified boundary conditions for \( \phi \) are implemented in the global system. The inlet and outlet boundaries are handled by setting appropriate values of \( \frac{\partial \phi}{\partial x} \) for flow in the \( x \)-direction, while Neumann conditions are applied on the top, bottom, and object boundaries.
+4. **Application of Boundary Conditions**: The specified boundary conditions for $\( \phi \)$ are implemented in the global system. The inlet and outlet boundaries are handled by setting appropriate values of $\( \frac{\partial \phi}{\partial x} \)$ for flow in the $\( x \)$-direction, while Neumann conditions are applied on the top, bottom, and object boundaries.
 
-5. **Solution of the Algebraic System**: The resulting system of algebraic equations is solved using a numerical solver to obtain the values of $ \phi $ at each node in the domain. These values provide the potential field in the domain, from which the velocity components \( u \) and $\( v \)$ can be derived.
+5. **Solution of the Algebraic System**: The resulting system of algebraic equations is solved using a numerical solver to obtain the values of $\( \phi \)$ at each node in the domain. These values provide the potential field in the domain, from which the velocity components $\( u \)$ and $\( v \)$ can be derived.
 
-6. **Post-Processing**: The velocity field is computed by differentiating \( \phi \) with respect to \( x \) and \( y \). The results are then visualized to analyze the flow pattern, particularly the impact of the solid object on the surrounding flow.
+6. **Post-Processing**: The velocity field is computed by differentiating $\( \phi \)$ with respect to \( x \) and \( y \). The results are then visualized to analyze the flow pattern, particularly the impact of the solid object on the surrounding flow.
 
 
 
