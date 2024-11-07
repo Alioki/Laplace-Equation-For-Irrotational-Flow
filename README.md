@@ -23,28 +23,28 @@ $$
 
 The flow is assumed to be irrotational, so the velocity components \( u \) and \( v \) in the \( x \)- and \( y \)-directions are derived from the potential function \( \phi \) as follows:
 
-\[
+$$
 u = \frac{\partial \phi}{\partial x} \quad \text{and} \quad v = \frac{\partial \phi}{\partial y}
-\]
+$$
 
 #### Boundary Conditions
 
 The boundary conditions applied to this domain are:
 
 1. **Inlet and Outlet Conditions**: Along the boundaries at \( x = 0 \) and \( x = lx \), the potential gradient in the \( x \)-direction is specified:
-   \[
+  $$
    \frac{\partial \phi}{\partial x} = U
-   \]
+  $$
 
 2. **No Flow (Neumann) Conditions on Top and Bottom Boundaries**: Along the boundaries at \( y = 0 \) and \( y = ly \), the gradient of \( \phi \) in the \( y \)-direction is zero, implying no flow across these boundaries:
-   \[
+   $$
    \frac{\partial \phi}{\partial y} = 0
-   \]
+   $$
 
 3. **Solid Object Boundary Condition**: On the boundary of the solid circular object in the center of the domain, we assume no flow across the object’s boundary, represented by:
-   \[
+   $$
    \nabla \phi \cdot \mathbf{n} = 0
-   \]
+   $$
    where \( \mathbf{n} \) is the normal vector to the boundary of the solid object.
 
 #### Solution Approach Using Finite Element Method (FEM)
