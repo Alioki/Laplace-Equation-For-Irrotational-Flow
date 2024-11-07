@@ -17,7 +17,9 @@ The ability to solve the Laplace equation, especially for complex geometries lik
 
 To analyze the irrotational flow in this domain, we utilize the Laplace equation for the scalar velocity potential \( \phi \), which satisfies the following form in a two-dimensional domain:
 
-$$\( \frac{\partial^2 \phi}{\partial x^2} + \frac{\partial^2 \phi}{\partial y^2} = 0 \)$$
+$$
+\frac{\partial^2 \phi}{\partial x^2} + \frac{\partial^2 \phi}{\partial y^2} = 0 
+$$
 
 The flow is assumed to be irrotational, so the velocity components \( u \) and \( v \) in the \( x \)- and \( y \)-directions are derived from the potential function \( \phi \) as follows:
 
@@ -33,14 +35,14 @@ The boundary conditions applied to this domain are:
   $$\( \frac{\partial \phi}{\partial x} = U \)$$
 
 2. **No Flow (Neumann) Conditions on Top and Bottom Boundaries**: Along the boundaries at $\( y = 0 \)$ and $\( y = ly \)$, the gradient of $\( \phi \)$ in the $\( y \)$-direction is zero, implying no flow across these boundaries:
-   $$
+   $$\(
    \frac{\partial \phi}{\partial y} = 0
-   $$
+   \)$$
 
 3. **Solid Object Boundary Condition**: On the boundary of the solid circular object in the center of the domain, we assume no flow across the object’s boundary, represented by:
-   $$
+   $$\(
    \nabla \phi \cdot \mathbf{n} = 0
-   $$
+   \)$$
    where $\( \mathbf{n} \)$ is the normal vector to the boundary of the solid object.
 
 #### Solution Approach Using Finite Element Method (FEM)
