@@ -31,12 +31,12 @@ $$
 
 The boundary conditions applied to this domain are:
 
-1. **Inlet and Outlet Conditions**: Along the boundaries at \( x = 0 \) and \( x = lx \), the potential gradient in the \( x \)-direction is specified:
+1. **Inlet and Outlet Conditions**: Along the boundaries at $\( x = 0 \)$ and $\( x = lx \)$, the potential gradient in the $\( x \)$-direction is specified:
   $$
    \frac{\partial \phi}{\partial x} = U
   $$
 
-2. **No Flow (Neumann) Conditions on Top and Bottom Boundaries**: Along the boundaries at \( y = 0 \) and \( y = ly \), the gradient of \( \phi \) in the \( y \)-direction is zero, implying no flow across these boundaries:
+2. **No Flow (Neumann) Conditions on Top and Bottom Boundaries**: Along the boundaries at $\( y = 0 \)$ and $\( y = ly \)$, the gradient of $\( \phi \)$ in the $\( y \)$-direction is zero, implying no flow across these boundaries:
    $$
    \frac{\partial \phi}{\partial y} = 0
    $$
@@ -45,7 +45,7 @@ The boundary conditions applied to this domain are:
    $$
    \nabla \phi \cdot \mathbf{n} = 0
    $$
-   where \( \mathbf{n} \) is the normal vector to the boundary of the solid object.
+   where $\( \mathbf{n} \)$ is the normal vector to the boundary of the solid object.
 
 #### Solution Approach Using Finite Element Method (FEM)
 
@@ -59,7 +59,7 @@ The boundary conditions applied to this domain are:
 
 5. **Solution of the Algebraic System**: The resulting system of algebraic equations is solved using a numerical solver to obtain the values of $\( \phi \)$ at each node in the domain. These values provide the potential field in the domain, from which the velocity components $\( u \)$ and $\( v \)$ can be derived.
 
-6. **Post-Processing**: The velocity field is computed by differentiating $\( \phi \)$ with respect to \( x \) and \( y \). The results are then visualized to analyze the flow pattern, particularly the impact of the solid object on the surrounding flow.
+6. **Post-Processing**: The velocity field is computed by differentiating $\( \phi \)$ with respect to $\( x \)$ and $\( y \)$. The results are then visualized to analyze the flow pattern, particularly the impact of the solid object on the surrounding flow.
 
 
 
