@@ -15,6 +15,53 @@ The ability to solve the Laplace equation, especially for complex geometries lik
 ## Methodology
 
 
+To analyze the irrotational flow in this domain, we utilize the Laplace equation for the scalar velocity potential \( \phi \), which satisfies the following form in a two-dimensional domain:
+
+$\[
+\frac{\partial^2 \phi}{\partial x^2} + \frac{\partial^2 \phi}{\partial y^2} = 0
+\]$
+
+The flow is assumed to be irrotational, so the velocity components \( u \) and \( v \) in the \( x \)- and \( y \)-directions are derived from the potential function \( \phi \) as follows:
+
+\[
+u = \frac{\partial \phi}{\partial x} \quad \text{and} \quad v = \frac{\partial \phi}{\partial y}
+\]
+
+#### Boundary Conditions
+
+The boundary conditions applied to this domain are:
+
+1. **Inlet and Outlet Conditions**: Along the boundaries at \( x = 0 \) and \( x = lx \), the potential gradient in the \( x \)-direction is specified:
+   \[
+   \frac{\partial \phi}{\partial x} = U
+   \]
+
+2. **No Flow (Neumann) Conditions on Top and Bottom Boundaries**: Along the boundaries at \( y = 0 \) and \( y = ly \), the gradient of \( \phi \) in the \( y \)-direction is zero, implying no flow across these boundaries:
+   \[
+   \frac{\partial \phi}{\partial y} = 0
+   \]
+
+3. **Solid Object Boundary Condition**: On the boundary of the solid circular object in the center of the domain, we assume no flow across the object’s boundary, represented by:
+   \[
+   \nabla \phi \cdot \mathbf{n} = 0
+   \]
+   where \( \mathbf{n} \) is the normal vector to the boundary of the solid object.
+
+#### Solution Approach Using Finite Element Method (FEM)
+
+1. **Domain Discretization**: The domain, including the area around the solid object, is discretized into finite elements, such as triangular or quadrilateral elements. This discretization allows us to approximate the solution over each element and handle the complex geometry of the domain.
+
+2. **Weak Formulation of the Laplace Equation**: We convert the Laplace equation into its weak form by integrating over the domain and applying integration by parts. This approach transforms the partial differential equation into a set of algebraic equations suitable for FEM.
+
+3. **Assembly of the Global System of Equations**: Each finite element contributes to the global system of equations based on its local properties and the boundary conditions. The assembled system reflects the entire domain, including the boundaries with specified flow conditions and the no-flow boundary around the solid object.
+
+4. **Application of Boundary Conditions**: The specified boundary conditions for \( \phi \) are implemented in the global system. The inlet and outlet boundaries are handled by setting appropriate values of \( \frac{\partial \phi}{\partial x} \) for flow in the \( x \)-direction, while Neumann conditions are applied on the top, bottom, and object boundaries.
+
+5. **Solution of the Algebraic System**: The resulting system of algebraic equations is solved using a numerical solver to obtain the values of \( \phi \) at each node in the domain. These values provide the potential field in the domain, from which the velocity components \( u \) and \( v \) can be derived.
+
+6. **Post-Processing**: The velocity field is computed by differentiating \( \phi \) with respect to \( x \) and \( y \). The results are then visualized to analyze the flow pattern, particularly the impact of the solid object on the surrounding flow.
+
+
 
 ## Applications
 
