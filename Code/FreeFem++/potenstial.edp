@@ -1,0 +1,52 @@
+real H= 0.5;
+real W=1;
+int meshSize = 100;
+
+real xCenter=0.5;
+real pDiameter = 0.2;
+real yCenter=0.25;
+
+
+int wall = 1;
+int inlet = 2;
+int outlet = 3;
+
+macro div(u) (dx(u#x) + dy(u#y) + dz(u#z))//
+macro grad(u) [dx(u), dy(u), dz(u)]//
+macro Grad(u) [grad(u#x), grad(u#y), grad(u#z)]//
+
+mesh Mesh;
+border b1(t=0., 1.){x=W*t; y=0.;};
+border b2(t=0., 1.){x=W; y=H*t;};
+border b3(t=0., 1.){x=W-W*t; y=H;};
+border b4(t=0., 1.){x=0.; y=H-H*t;};
+border c1(t = 0 , 2 * pi) { x = xCenter + pDiameter / 2 * cos(t) ; y = yCenter + pDiameter / 2 * sin(t) ;};
+Mesh = buildmesh(b1(meshSize) 
++ b2(meshSize) 
++ b3(meshSize) 
++ b4(meshSize)
++c1(-meshSize)
+);
+plot(Mesh, wait=1);
+
+
+
+fespace Vh(Mesh, P1);
+Vh u, v;// Define u and v as piecewise-P1 continuous functions
+ // Define a function f
+
+// Get the clock in second
+ real cpu=clock();
+
+varf aa(u,v,solver=CG,eps=1.0e6)=int2d(Mesh)(dx(u)*dx(v)+dy(u)*dy(v));
+varf external(u,v)=int1d(Mesh,b2)(1*v)+int1d(Mesh,b4)(-1*v);
+
+real tgv=0.01;
+matrix A = aa(Vh,Vh);
+real[int] ff = external(0,Vh);
+
+u[] = A^-1 * ff; 
+
+plot(Mesh, u, value=true,fill=true);
+ 
+
