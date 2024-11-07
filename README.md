@@ -32,9 +32,7 @@ $$
 The boundary conditions applied to this domain are:
 
 1. **Inlet and Outlet Conditions**: Along the boundaries at $\( x = 0 \)$ and $\( x = lx \)$, the potential gradient in the $\( x \)$-direction is specified:
-  $
-   \frac{\partial \phi}{\partial x} = U
-  $
+  $ \frac{\partial \phi}{\partial x} = U $
 
 2. **No Flow (Neumann) Conditions on Top and Bottom Boundaries**: Along the boundaries at $\( y = 0 \)$ and $\( y = ly \)$, the gradient of $\( \phi \)$ in the $\( y \)$-direction is zero, implying no flow across these boundaries:
    $$
