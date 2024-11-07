@@ -104,7 +104,11 @@ Both methods produce consistent results, validating the boundary conditions and 
 
 * Python
   
-![ponetial](https://github.com/user-attachments/assets/50994b1c-f026-49b6-8bb3-63db3654a4e4)
+
+<p align="center">
+  <img src="[image.png](https://github.com/user-attachments/assets/50994b1c-f026-49b6-8bb3-63db3654a4e4)" alt="Description of image" width="500">
+</p>
+
 
 * FreeFem++
 
