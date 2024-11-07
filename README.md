@@ -102,6 +102,14 @@ The solutions obtained using Python and FreeFEM++ both demonstrate the behavior 
 
 Both methods produce consistent results, validating the boundary conditions and the effectiveness of the Laplace equation for modeling irrotational flow. The smooth transitions in the potential field around the object illustrate how the presence of the solid boundary influences the flow, with gradients that are consistent between the two platforms.
 
+* Python
+  
+![ponetial](https://github.com/user-attachments/assets/50994b1c-f026-49b6-8bb3-63db3654a4e4)
+
+* FreeFem++
+![Potential](https://github.com/user-attachments/assets/80342956-aa28-4445-ac10-10ca3a8a1c65)
+
+
 
 ## Refrences
 
